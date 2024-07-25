@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Panimalar ERP | Panel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/pec-logo.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="fonts/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Modernize js -->
+    <script src="js/modernizr-3.6.0.min.js"></script>
+    <style>
+        .form-control {
+            height: 50px; /* Adjust the height as needed */
+            padding: 10px; /* Adjust padding as needed */
+        }
+        select.form-control {
+            height: 50px; /* Adjust the height as needed */
+            line-height: 30px; /* Adjust line-height to center the text vertically */
+        }
+        .form-section {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <!-- Login Page Start Here -->
+    <div class="login-page-wrap">
+        <div class="login-page-content">
+            <div class="login-box">
+                <div class="">
+                    <img src="img/Untitled design.png" alt="logo" width="400px">
+                </div>
+                <form action="staffindex.html" class="login-form">
+
+                    <div class="container mt-5">
+                        <div class="form-group">
+                            <select id="roleSelect" class="form-control">
+                                <option value="role">SELECT YOUR ROLE</option>
+                                <option value="STUDENT" style="font-size: 15px; font-weight: bold;">STUDENT/PARENT</option>
+                                <option value="FACULTY" style="font-size: 15px; font-weight: bold;">FACULTY</option>
+                                <option value="HOD" style="font-size: 15px; font-weight: bold;">HOD</option>
+                            </select>
+                        </div>
+                        <div id="STUDENT" class="form-section">
+                            <div class="form-group">
+                                <label style="font-weight: bold;">ROLL NUMBER</label>
+                                <input type="text" placeholder="Enter your roll number" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label style="font-weight: bold;">DATE OF BIRTH</label>
+                                <input type="text" placeholder="DD-MM-YYYY" class="form-control">
+                            </div>
+
+                            
+                        </div>
+                        <div id="FACULTY" class="form-section">
+                            <div class="form-group">
+                                <label style="font-weight: bold;">EMAIL ID</label>
+                                <input type="text" placeholder="Enter your email ID" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label style="font-weight: bold;">PASSWORD</label>
+                                <input type="text" placeholder="Enter your password" class="form-control">
+                            </div>
+                            
+                        </div>
+                        <div id="HOD" class="form-section">
+                            <div class="form-group">
+                                <label style="font-weight: bold;">EMAIL ID</label>
+                                <input type="text" placeholder="Enter your email ID" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label style="font-weight: bold;">PASSWORD</label>
+                                <input type="text" placeholder="Enter your password" class="form-control">
+                            </div>
+                            
+                        </div>
+                       
+                    <script>
+                        document.getElementById('roleSelect').addEventListener('change', function() {
+                            var selectedValue = this.value;
+                            var sections = document.querySelectorAll('.form-section');
+                            
+                            // Hide all sections
+                            sections.forEach(function(section) {
+                                section.style.display = 'none';
+                            });
+                
+                            // Show the selected section
+                            if (selectedValue) {
+                                document.getElementById(selectedValue).style.display = 'block';
+                            }
+                        });
+                    </script>
+                    
+                    
+                    
+                    <div class="form-group">
+                        <button type="submit" class="login-btn" style="font-weight: bold; font-size: 20px;">LOGIN</button>
+                    </div>
+                    <p>Don't have an account ?  <a href="signup.html" style="color: rgb(13, 13, 86); font-weight: bold;">Register here</a></p>
+
+                </form>
+                
+            </div>
+            
+    <!-- Login Page End Here -->
+    <!-- jquery-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- Custom Js -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
