@@ -14,16 +14,11 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "..", "public")));
+// app.use(express.static(path.join(__dirname, "..", "public")));
+// Static files directory
+const staticDir = path.join('D:', 'CODE', 'nodejs', 'ERP-demo', 'erppanimalar', 'ltrfaculty');
+app.use(express.static(staticDir));
 
-app.use(
-  session({
-    secret: "askdljasdjasd",
-    resave: false,
-    saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: MONGODB_URI }),
-  })
-);
 
 const PORT = 3000;
 app.listen(PORT, () => {

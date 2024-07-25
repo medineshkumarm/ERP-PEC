@@ -308,11 +308,50 @@
                     <div class="card-body">
                         <div class="heading-layout1">
                             <div class="item-title"><br>
-                                <h3 style="font-weight: bold;">ADD NEW FACULTY</h3><br>
+                                <h3 style="font-weight: bold;">ADD NEW FasdsACULTY</h3><br>
                             </div><br>
                            
                         </div>
-                        <form class="new-added-form" style="color: black;">
+                        <form id="faculty-form" class="new-added-form" style="color: black;" method="post">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Faculty Name</label>
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Degree</label>
+                                    <input type="text" name="qualifications" class="form-control" required>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Designation</label>
+                                    <select name="designation" class="select2" required>
+                                        <option value="">Please Select Designation</option>
+                                        <option value="Professor">Professor</option>
+                                        <option value="Associate Professor">Associate Professor</option>
+                                        <option value="Assistant Professor">Assistant Professor</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Email ID</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Contact No</label>
+                                    <input type="text" name="contactNumber" class="form-control" required>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Scopus Link</label>
+                                    <input type="url" name="scopusLink" class="form-control" required>
+                                </div>
+                                <div class="col-12 form-group mg-t-8">
+                                    <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
+                                    <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        
+                        <!-- <form class="new-added-form" style="color: black;">
                             <div class="row">
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Faculty Name</label>
@@ -368,30 +407,7 @@
                                     <label>Years of Experience</label>
                                     <input type="email" placeholder="" class="form-control">
                                 </div>
-                                <!-- <div class="col-xl-3 col-lg-6 col-12 form-group"> 
-                                    <label>Class *</label>
-                                    <select class="select2">
-                                        <option value="">Please Select Class *</option>
-                                        <option value="1">Play</option>
-                                        <option value="2">Nursery</option>
-                                        <option value="3">One</option>
-                                        <option value="3">Two</option>
-                                        <option value="3">Three</option>
-                                        <option value="3">Four</option>
-                                        <option value="3">Five</option>
-                                    </select>
-                                </div>-->
-                                <!-- <div class="col-xl-3 col-lg-6 col-12 form-group"> 
-                                    <label>Section *</label>
-                                    <select class="select2">
-                                        <option value="">Please Select Section *</option>
-                                        <option value="1">Pink</option>
-                                        <option value="2">Blue</option>
-                                        <option value="3">Bird</option>
-                                        <option value="3">Rose</option>
-                                        <option value="3">Red</option>
-                                    </select>
-                                </div>-->
+                          
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Address</label>
                                     <input type="text" placeholder="" class="form-control">
@@ -414,7 +430,7 @@
                                     <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
                 <!-- Add New Teacher Area End Here -->
@@ -446,6 +462,7 @@
     <script src="js/jquery.scrollUp.min.js"></script>
     <!-- Custom Js -->
     <script src="js/main.js"></script>
+    <script src="js/HOD.js"></script>
 
 </body>
 
