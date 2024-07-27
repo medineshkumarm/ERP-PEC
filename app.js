@@ -11,38 +11,12 @@ const port = 3000;
 
 // Middleware
 app.use(bodyParser.json());
-
-// const FacultycDir = path.join(
-//   "D:",
-//   "CODE",
-//   "nodejs",
-//   "ERP-demo",
-//   "erppanimalar",
-//   "ltrfaculty"
-// );
-// const HODDir = path.join(
-//   "D:",
-//   "CODE",
-//   "nodejs",
-//   "ERP-demo",
-//   "erppanimalar",
-//   "ltrhod"
-// );
-// const stdDir = path.join(
-//   "D:",
-//   "CODE",
-//   "nodejs",
-//   "ERP-demo",
-//   "erppanimalar",
-//   "ltrhod"
-// );
-
-const baseDir = path.join(__dirname, "erppanimalar");
+const baseDir = path.join(__dirname, "public");
 
 // Append specific subdirectories to the base directory
-const FacultycDir = path.join(baseDir, "ltrfaculty");
-const HODDir = path.join(baseDir, "ltrhod");
-const stdDir = path.join(baseDir, "ltrstudent");
+const FacultycDir = path.join(baseDir, "faculty");
+const HODDir = path.join(baseDir, "hod");
+const stdDir = path.join(baseDir, "student");
 
 app.use(express.static(FacultycDir));
 app.use(express.static(HODDir));
@@ -67,7 +41,6 @@ const sampleData = [
     scopusLink: "https://www.scopus.com/authid/detail.uri?authorId=57195713766",
   },
   {
-    id: 2,
     name: "Dr. A. JAMES",
     qualifications: "M.Sc., Ph.D.",
     designation: "Associate Professor",
@@ -87,19 +60,22 @@ const sampleData = [
 //     console.error("Error inserting sample data:", error);
 //   }
 // };
-
-
-app.get("/f", (req, res) => {
-  res.sendFile(path.join(FacultycDir, "all-teacher.html"));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(FacultycDir, "index.html"));
 });
 
-app.get("/h", (req, res) => {
-  res.sendFile(path.join(HODDir, "all-teacher.html"));
-});
 
-app.get("/s", (req, res) => {
-  res.sendFile(path.join(stdDir, "all-teacher.html"));
-});
+// app.get("/f", (req, res) => {
+//   res.sendFile(path.join(FacultycDir, "all-teacher.html"));
+// });
+
+// app.get("/h", (req, res) => {
+//   res.sendFile(path.join(HODDir, "all-teacher.html"));
+// });
+
+// app.get("/s", (req, res) => {
+//   res.sendFile(path.join(stdDir, "all-teacher.html"));
+// });
 
 app.get("/api/post", (req, res) => {
   res.sendFile(path.join(HODDir, "add-teacher.html"));
