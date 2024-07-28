@@ -1,10 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html class="no-js" lang="">    
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Panimalar ERP | Notice Board</title>
+    <title>Panimalar ERP | All assignments</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -21,16 +20,16 @@
     <link rel="stylesheet" href="fonts/flaticon.css">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="css/animate.min.css">
-    <!-- Date Picker CSS -->
-    <link rel="stylesheet" href="css/datepicker.min.css">
-    <!-- Select 2 CSS -->
-    <link rel="stylesheet" href="css/select2.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
-
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
     <!-- Modernize js -->
     <script src="js/modernizr-3.6.0.min.js"></script>
 </head>
@@ -44,7 +43,7 @@
 <div class="navbar navbar-expand-md header-menu-one bg-light">
     <div class="nav-bar-header-one">
         <div class="header-logo">
-            <a href="staffindex.html">
+            <a href="hodindex.html">
                 <img src="img/Untitled design.png" width="140px" alt="logo">
             </a>
         </div>
@@ -75,24 +74,24 @@
                 <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                     aria-expanded="false">
                     <div class="admin-title">
-                        <h5 class="item-title">Kalayarasi D</h5>
-                        <span>Faculty</span>
+                        <h5 class="item-title">Rajkumar S</h5>
+                        <span>HOD</span>
                     </div>
                     <div class="admin-img">
-                        <img src="img/D.Kalaiyarasi photo.jpg" width="40px" alt="Admin">
+                        <img src="img/ece-hod.jpg" width="40px" alt="Admin">
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="item-header">
-                        <h6 class="item-title">Kalaiyarasi D</h6>
+                        <h6 class="item-title">Rajkumar S</h6>
                     </div>
                     <div class="item-content">
                         <ul class="settings-list">
-                            <li><a href="staffdetail.html"><i class="flaticon-user"></i>My Profile</a></li>
+                            <li><a href="hoddetail.html"><i class="flaticon-user"></i>My Profile</a></li>
                             <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
                             <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
                             <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-                            <li><a href="stafflogin.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
+                            <li><a href="/logout"><i class="flaticon-turn-off"></i>Log Out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -144,19 +143,36 @@
 <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
     <div class="mobile-sidebar-header d-md-none">
          <div class="header-logo">
-             <a href="staffindex.html"><img src="img/logo1.png" width="120px" alt="logo"></a>
+             <a href="hodindex.html"><img src="img/logo1.png" width="120px" alt="logo"></a>
          </div>
     </div>
      <div class="sidebar-menu-content">
          <ul class="nav nav-sidebar-menu sidebar-toggle-view">
             
              <li class="nav-item">
-                <a href="staffindex.html" class="nav-link"><i class="fi fi-ss-home"></i><span>Home</span></a>
+                <a href="hodindex.html" class="nav-link"><i class="fi fi-ss-home"></i><span>Home</span></a>
             </li>
-             
+             <li class="nav-item">
+                <a href="all-hod.html" class="nav-link"><i class="flaticon-multiple-users-silhouette"></i><span>HOD Details</span></a>
+            </li>
              <li class="nav-item sidebar-nav-item">
-                 <a href="all-teacher.html" class="nav-link"><i class="fi fi-ss-chalkboard-user"></i><span>Faculty details</span></a>
-                 
+                 <a href="#" class="nav-link"><i class="fi fi-ss-chalkboard-user"></i><span>Faculty details</span></a>
+                 <ul class="nav sub-group-menu">
+                     <li class="nav-item">
+                         <a href="all-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>All faculty details</a>
+                     </li>
+                     <!-- <li class="nav-item"> -
+                         <a href="teacher-details.html" class="nav-link"><i
+                                 class="fas fa-angle-right"></i>Teacher Details</a>
+                     </li>-->
+                     <li class="nav-item">
+                         <a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Add new faculty</a>
+                     </li>
+                     <!-- <li class="nav-item"> -
+                         <a href="teacher-payment.html" class="nav-link"><i
+                                 class="fas fa-angle-right"></i>Payment</a>
+                     </li>-->   
+                 </ul>
              </li>
              <li class="nav-item">
                 <a href="all-student.html" class="nav-link"><i class="fi fi-ss-student"></i><span>Students details</span></a>
@@ -189,10 +205,10 @@
                              Book</a>
                      </li>
                  </ul>
-             </li>-->
+             </li>
              <li class="nav-item sidebar-nav-item">
                  <a href="all-fees.html" class="nav-link"><i class="flaticon-technological"></i><span>Students fee details</span></a>
-                 <!-- <ul class="nav sub-group-menu"> -
+                  <ul class="nav sub-group-menu"> -
                      <li class="nav-item">
                          <a href="all-fees.html" class="nav-link"><i class="fas fa-angle-right"></i>All Fees
                              Collection</a>
@@ -256,18 +272,17 @@
                 </ul>
             </li>
              
-             <li class="nav-item">
-                 <a href="transport.html" class="nav-link"><i
+             <!-- <li class="nav-item"> 
+                 <a href="transport.php" class="nav-link"><i
                          class="flaticon-bus-side-view"></i><span>Bus transport</span></a>
              </li>
              <li class="nav-item">
-                 <a href="allhostel.html" class="nav-link"><i class="flaticon-bed"></i><span>Hostel students</span></a>
-             </li>
+                 <a href="allhostel.php" class="nav-link"><i class="flaticon-bed"></i><span>Hostel students</span></a>
+             </li>-->
              <li class="nav-item">
                  <a href="notice-board.html" class="nav-link"><i
                          class="flaticon-script"></i><span>Notice board</span></a>
-             </li>
-             <li class="nav-item">
+             </li>          <li class="nav-item">
                  <a href="messaging.html" class="nav-link"><i
                          class="flaticon-chat"></i><span>Message</span></a>
              </li>
@@ -278,116 +293,45 @@
             <div class="dashboard-content-one">
                 <!-- Breadcubs Area Start Here -->
                 <div class="breadcrumbs-area">
-                    <h3>Notice Board</h3>
+                    <h3>All Assignments</h3>
                     <ul>
                         <li>
-                            <a href="staffindex.html">Home</a>
+                            <a href="index.html">Home</a>
                         </li>
-                        <li>Notice Board</li>
+                        <li>All assignments</li>
                     </ul>
                 </div>
                 <!-- Breadcubs Area End Here -->
-                <div class="row">
-                    <!-- Add Notice Area Start Here -->
-                    <div class="col-4-xxxl col-12">
-                        <div class="card height-auto">
-                            <div class="card-body">
-                                <div class="heading-layout1">
-                                    <div class="item-title">
-                                        <h3>Create A Notice</h3>
-                                    </div>
-                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" 
-                                        data-toggle="dropdown" aria-expanded="false">...</a>
-                
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <form class="new-added-form" method="post" action="/api/notices">
-                                    <div class="row">
-                                        <div class="col-12-xxxl col-lg-6 col-12 form-group">
-                                            <label>Sender</label>
-                                            <input type="text" placeholder="Enter the sender detail" class="form-control">
-                                        </div>
-                                        <div class="col-12-xxxl col-lg-6 col-12 form-group">
-                                            <label>Message</label>
-                                            <input type="text" placeholder="Type your message" class="form-control">
-                                        </div>
-                                        
-                                        <div class="col-12-xxxl col-lg-6 col-12 form-group">
-                                            <label>Date</label>
-                                            <input type="text" placeholder="" class="form-control air-datepicker">
-                                            <i class="far fa-calendar-alt"></i>
-                                        </div>
-                                        <div class="col-12-xxxl col-lg-6 col-12 form-group">
-                                            <label>Upload the document</label>
-                                            <input type="file" placeholder="upload" class="form-control">
-                                            
-                                        </div>
-                                        <div class="col-12 form-group mg-t-8">
-                                            <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Send</button>
-                                            <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
-                                        </div>
-                                    </div>
-                                </form>
+                 
+                <!-- Class Table Area Start Here -->
+                <div class="card height-auto">
+                    <div class="card-body">
+                        <div class="heading-layout1">
+                            <div class="item-title"><br>
+                                <h3>ALL ASSIGNMENTS</h3>
                             </div>
+                           
                         </div>
-                    </div>
-                    <!-- Add Notice Area End Here -->
-                    <!-- All Notice Area Start Here -->
-                    <div class="col-8-xxxl col-12">
-                        <div class="card height-auto">
-                            <div class="card-body">
-                                <div class="heading-layout1">
-                                    <div class="item-title"><br>
-                                        <h3>NOTICE BOARD</h3>
-                                    </div>
-                                     
-                                </div><br>
+                        
+                        <div class="table-responsive"><br>
+                     <br>
                                 
                                 <div class="notice-board-wrap">
-                                    <div class="notice-list">
-                                        <div class="post-date bg-skyblue">17 July, 2024</div>
-                                        <h6 class="notice-title"><a href="#">Placement training for 2025 batch students is extended to 02 August, 2024 </a></h6>
-                                        <div class="entry-meta">Placement Department / <span>5 min ago</span></div>
-                                    </div>
-                                    <div class="notice-list">
-                                        <div class="post-date bg-yellow">06 July, 2024</div>
-                                        <h6 class="notice-title"><a href="#">On 08th July 2024 college is reopening for II, III year students of PEC <a href="#" style="color: blue; text-decoration:underline">Click here</a></a></h6>
-                                        <div class="entry-meta">  ECE, HOD / <span>5 min ago</span></div>
-                                    </div>
-                                    <div class="notice-list">
-                                        <div class="post-date bg-skyblue">17 July, 2024</div>
-                                        <h6 class="notice-title"><a href="#">Placement training for 2025 batch students is extended to 02 August, 2024 </a></h6>
-                                        <div class="entry-meta">Placement Department / <span>5 min ago</span></div>
-                                    </div>
-                                    <div class="notice-list">
-                                        <div class="post-date bg-yellow">06 July, 2024</div>
-                                        <h6 class="notice-title"><a href="#">On 08th July 2024 college is reopening for II, III year students of PEC</a></h6>
-                                        <div class="entry-meta">  ECE, HOD / <span>5 min ago</span></div>
-                                    </div>
-                                    <div class="notice-list">
-                                        <div class="post-date bg-skyblue">17 July, 2024</div>
-                                        <h6 class="notice-title"><a href="#">Placement training for 2025 batch students is extended to 02 August, 2024 </a></h6>
-                                        <div class="entry-meta">Placement Department / <span>5 min ago</span></div>
-                                    </div>
-                                    <div class="notice-list">
-                                        <div class="post-date bg-yellow">06 July, 2024</div>
-                                        <h6 class="notice-title"><a href="#">On 08th July 2024 college is reopening for II, III year students of PEC</a></h6>
-                                        <div class="entry-meta">  ECE, HOD / <span>5 min ago</span></div>
-                                    </div>
+                                   <!-- data will be displayed dynamically here -->
+                                    
                                 </div>
+                            
+                    <!-- All Notice Area End Here -->
                             </div>
                         </div>
                     </div>
                     <!-- All Notice Area End Here -->
+                        </div>
+                    </div>
                 </div>
-             <!-- Footer Area Start Here -->
-             <footer class="footer-wrap-layout1">
+                <!-- Class Table Area End Here -->
+               <!-- Footer Area Start Here -->
+               <footer class="footer-wrap-layout1">
                 <div class="copyright" style="text-align: center;">© Copyrights <a href="www.panimalar.ac.in">Panimalar Engineering College</a> 2024. All rights reserved. Designed by<a
                         href="www.infomatronics.in"> Infomatronics Project Services</a></div>
             </footer>
@@ -404,14 +348,14 @@
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Select 2 Js -->
-    <script src="js/select2.min.js"></script>
     <!-- Scroll Up Js -->
     <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- Date Picker Js -->
-    <script src="js/datepicker.min.js"></script>
+    <!-- Data Table Js -->
+    <script src="js/jquery.dataTables.min.js"></script>
     <!-- Custom Js -->
     <script src="js/main.js"></script>
+    <!-- <script src="my_js/HOD.js"></script> -->
+    <script src="my_js/ass.js"></script>
 
 </body>
 

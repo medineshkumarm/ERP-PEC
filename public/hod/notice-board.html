@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Panimalar ERP | Emails and messages</title>
+    <title>Panimalar ERP | Notice Board</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -21,10 +21,12 @@
     <link rel="stylesheet" href="fonts/flaticon.css">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Date Picker CSS -->
+    <link rel="stylesheet" href="css/datepicker.min.css">
     <!-- Select 2 CSS -->
     <link rel="stylesheet" href="css/select2.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
@@ -38,7 +40,6 @@
     <div id="preloader"></div>
     <!-- Preloader End Here -->
     <div id="wrapper" class="wrapper bg-ash">
-<!-- Header Menu Area Start Here -->
 <!-- Header Menu Area Start Here -->
 <div class="navbar navbar-expand-md header-menu-one bg-light">
     <div class="nav-bar-header-one">
@@ -91,7 +92,7 @@
                             <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
                             <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
                             <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-                            <li><a href="hodlogin.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
+                            <li><a href="/logout"><i class="flaticon-turn-off"></i>Log Out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -293,25 +294,25 @@
             <div class="dashboard-content-one">
                 <!-- Breadcubs Area Start Here -->
                 <div class="breadcrumbs-area">
-                    <h3>Messaging</h3>
+                    <h3>Notice Board</h3>
                     <ul>
                         <li>
                             <a href="hodindex.html">Home</a>
                         </li>
-                        <li>Compose Message</li>
+                        <li>Notice Board</li>
                     </ul>
                 </div>
                 <!-- Breadcubs Area End Here -->
                 <div class="row">
                     <!-- Add Notice Area Start Here -->
-                    <div class="col-xl-8">
-                        <div class="card">
+                    <div class="col-4-xxxl col-12">
+                        <div class="card height-auto">
                             <div class="card-body">
                                 <div class="heading-layout1">
                                     <div class="item-title">
-                                        <h3>Write New Message</h3>
+                                        <h3>Create A Notice</h3>
                                     </div>
-                                   <div class="dropdown">
+                                     <div class="dropdown">
                                         <a class="dropdown-toggle" href="#" role="button" 
                                         data-toggle="dropdown" aria-expanded="false">...</a>
                 
@@ -324,19 +325,24 @@
                                 </div>
                                 <form class="new-added-form">
                                     <div class="row">
+                                        <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                            <label>Sender</label>
+                                            <input type="text" placeholder="Enter the sender detail" class="form-control">
+                                        </div>
+                                        <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                            <label>Message</label>
+                                            <input type="text" placeholder="Type your message" class="form-control">
+                                        </div>
                                         
-                                        <div class="col-12 form-group">
-                                            <label>Subject</label>
-                                            <input type="text" placeholder="Enter the title of your message" class="form-control">
+                                        <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                            <label>Date</label>
+                                            <input type="text" placeholder="" class="form-control air-datepicker">
+                                            <i class="far fa-calendar-alt"></i>
                                         </div>
-                                        <div class="col-12 form-group">
-                                            <label>Recipient</label>
-                                            <input type="text" placeholder="Enter the reciptent " class="form-control">
-                                        </div>
-                                        <div class="col-12 form-group">
-                                            <label>Message here</label>
-                                            <textarea class="textarea form-control" placeholder="Enter your message" name="message" id="form-message" cols="10"
-                                            rows="9"></textarea>
+                                        <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                            <label>Upload the document</label>
+                                            <input type="file" placeholder="upload" class="form-control">
+                                            
                                         </div>
                                         <div class="col-12 form-group mg-t-8">
                                             <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Send</button>
@@ -348,67 +354,56 @@
                         </div>
                     </div>
                     <!-- Add Notice Area End Here -->
-                    <!-- All Notice Area Start Here 
-                    <div class="col-xl-4">
-                        <div class="card message-box-wrap height-auto">
+                    <!-- All Notice Area Start Here -->
+                    <div class="col-8-xxxl col-12">
+                        <div class="card height-auto">
                             <div class="card-body">
                                 <div class="heading-layout1">
-                                    <div class="item-title">
-                                        <h3>Successful Message</h3>
+                                    <div class="item-title"><br>
+                                        <h3>NOTICE BOARD</h3>
                                     </div>
-                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" 
-                                        data-toggle="dropdown" aria-expanded="false">...</a>
-                
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
-                                        </div>
+                                     
+                                </div><br>
+                                
+                                <div class="notice-board-wrap">
+                                    <div class="notice-list">
+                                        <div class="post-date bg-skyblue">17 July, 2024</div>
+                                        <h6 class="notice-title"><a href="#">Placement training for 2025 batch students is extended to 02 August, 2024 </a></h6>
+                                        <div class="entry-meta">Placement Department / <span>5 min ago</span></div>
                                     </div>
-                                </div>
-                                <div class="message-success-box">
-                                    <div class="item-content">
-                                        <div class="item-icon">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <h3 class="item-title">Successfully Message Sent</h3>
+                                    <div class="notice-list">
+                                        <div class="post-date bg-yellow">06 July, 2024</div>
+                                        <h6 class="notice-title"><a href="#">On 08th July 2024 college is reopening for II, III year students of PEC <a href="#" style="color: blue; text-decoration:underline">Click here</a></a></h6>
+                                        <div class="entry-meta">  ECE, HOD / <span>5 min ago</span></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card message-box-wrap height-auto">
-                            <div class="card-body">
-                                <div class="heading-layout1">
-                                    <div class="item-title">
-                                        <h3>Error Message</h3>
+                                    <div class="notice-list">
+                                        <div class="post-date bg-skyblue">17 July, 2024</div>
+                                        <h6 class="notice-title"><a href="#">Placement training for 2025 batch students is extended to 02 August, 2024 </a></h6>
+                                        <div class="entry-meta">Placement Department / <span>5 min ago</span></div>
                                     </div>
-                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" 
-                                        data-toggle="dropdown" aria-expanded="false">...</a>
-                
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
-                                        </div>
+                                    <div class="notice-list">
+                                        <div class="post-date bg-yellow">06 July, 2024</div>
+                                        <h6 class="notice-title"><a href="#">On 08th July 2024 college is reopening for II, III year students of PEC</a></h6>
+                                        <div class="entry-meta">  ECE, HOD / <span>5 min ago</span></div>
                                     </div>
-                                </div>
-                                <div class="message-error-box">
-                                    <div class="item-content">
-                                        <div class="item-icon">
-                                            <i class="fas fa-exclamation-circle"></i>
-                                        </div>
-                                        <h3 class="item-title">Some Field Requierd Here</h3>
+                                    <div class="notice-list">
+                                        <div class="post-date bg-skyblue">17 July, 2024</div>
+                                        <h6 class="notice-title"><a href="#">Placement training for 2025 batch students is extended to 02 August, 2024 </a></h6>
+                                        <div class="entry-meta">Placement Department / <span>5 min ago</span></div>
+                                    </div>
+                                    <div class="notice-list">
+                                        <div class="post-date bg-yellow">06 July, 2024</div>
+                                        <h6 class="notice-title"><a href="#">On 08th July 2024 college is reopening for II, III year students of PEC</a></h6>
+                                        <div class="entry-meta">  ECE, HOD / <span>5 min ago</span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                     All Notice Area End Here -->
+                    <!-- All Notice Area End Here -->
                 </div>
-               <!-- Footer Area Start Here -->
-               <footer class="footer-wrap-layout1">
+             <!-- Footer Area Start Here -->
+             <footer class="footer-wrap-layout1">
                 <div class="copyright" style="text-align: center;">© Copyrights <a href="www.panimalar.ac.in">Panimalar Engineering College</a> 2024. All rights reserved. Designed by<a
                         href="www.infomatronics.in"> Infomatronics Project Services</a></div>
             </footer>
@@ -429,6 +424,8 @@
     <script src="js/select2.min.js"></script>
     <!-- Scroll Up Js -->
     <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- Date Picker Js -->
+    <script src="js/datepicker.min.js"></script>
     <!-- Custom Js -->
     <script src="js/main.js"></script>
 
